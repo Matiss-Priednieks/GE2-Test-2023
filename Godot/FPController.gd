@@ -61,7 +61,7 @@ func _process(delta):
 		podattachment.start()
 			
 		
-		playerrotation.interpolate_property(self, "global_rotation", global_rotation, $"../creature/boid".global_rotation, 0.1, Tween.TRANS_CIRC, Tween.EASE_IN)
+		playerrotation.interpolate_property(self, "global_rotation", global_rotation, $"../creature/boid".global_transform.basis.rotated(Vector3(0, 1, 0), 170).get_euler(), 0.1, Tween.TRANS_CIRC, Tween.EASE_IN)
 		playerrotation.start()
 		
 		
